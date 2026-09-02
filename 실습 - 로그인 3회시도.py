@@ -30,8 +30,9 @@ for i in range(1,4):
             if menuselect == 1:
                 print(f"내 아이디는 : {id}입니다.")
                 print(f"내 비밀번호는 : {password}입니다.")
+                if(password != "1234"):
+                    break
                 print()
-
 
             elif menuselect == 2:
                 print("현재 비밀번호를 입력해주세요!")
@@ -41,14 +42,17 @@ for i in range(1,4):
                     newpw = input()
                     password = newpw
                     continue
+
                 elif (nowpw != "1234"):
                     print("비밀번호 오류! 처음부터 다시 입력하세요!")
                     continue
+
             elif menuselect == 3:
                 print("로그아웃 합니다.")
                 break
 
         break
+
     if(id == "admin" and password != "1234"):
         if (i==3):
             print("계정이 정지되었습니다. - 고객센터로 문의해주시기 바랍니다.")
